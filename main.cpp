@@ -10,7 +10,6 @@ int main() {
     string saturn = "Saturn";
     string earth = "Earth";
     string venus = "Venus";
-
     SpaceRoute<string> voyagerRoute;
 
     voyagerRoute.addWaypointAtEnd(mars);
@@ -29,8 +28,7 @@ int main() {
     voyagerRoute.print();
 
     voyagerRoute.removeWaypointAtIndex(2);
-    cout << "\nAfter Removing Venus: \n";
-    voyagerRoute.print();
+
 
     return 0;
 }
