@@ -97,7 +97,7 @@ public:
             }
         }
     }
-    void removeWaypointAtBeginning() {
+    void removeWaypointAtBeginning() { // O(1) because we're just doing one condition to see  whether head is null or not.
         if (head == nullptr) {
             cout << "Cant remove an empty list." << endl;
         }
@@ -108,7 +108,7 @@ public:
             temp = nullptr;
          }
     }
-    void removeWaypointAtEnd() {
+    void removeWaypointAtEnd() { // O(1) because we're just doing one condition to see  whether head is null or not.
         if (head == nullptr) {
             cout << "Can't remove an empty list." << endl;
         }
@@ -120,7 +120,7 @@ public:
             temp = nullptr;
         }
     }
-    void removeWaypointAtIndex(int index) {
+    void removeWaypointAtIndex(int index) { // O(n) because the loop will go a maximum of n times and the operations are O(1).
         Node<T> * temp = head;
         int currIndex = 0;
         if (index < 0) {
@@ -140,21 +140,21 @@ public:
             }
         }
     }
-    void traverseForward() {
+    void traverseForward() { // O(n) because the loop will go a maximum of n times and the operations are O(1).
          Node<T> *temp = head;
          while (temp != nullptr) {
              temp->print();
              temp = temp->next;
          }
     }
-    void traverseBackward() {
+    void traverseBackward() { // O(n) because the loop will go a maximum of n times and the operations are O(1).
          Node<T> *temp = tail;
          while (temp != nullptr) {
              temp->print();
              temp = temp->prev;
          }
     }
-    Node<T>* getWaypoint(int index) {
+    Node<T>* getWaypoint(int index) { // O(index) because the loop will go a maximum of n times and the operations are O(1).
         Node<T> *temp = head;
         int currIndex;
         if (index < 0) {
@@ -167,13 +167,13 @@ public:
             return temp;
         }
     }
-    void setWaypoint(int index, T& data) {
+    void setWaypoint(int index, T& data) { // O(n) because the loop will go a maximum of n times and the operations are O(1).
         Node<T> *temp = getWaypoint(index);
         if (temp != nullptr) {
             temp->data = data;
         }
     }
-    void print(){
+    void print(){ //O(n) because the loop will go a maximum of n times and the operations are O(1).
 
             Node<T>* current = head;
             while (current) {
